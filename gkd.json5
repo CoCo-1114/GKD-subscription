@@ -1,0 +1,3210 @@
+{
+  "id": 2026110702,
+  "name": "应用清单广告规则整理版",
+  "version": 3,
+  "categories": [
+    {
+      "key": 0,
+      "name": "开屏广告",
+      "enable": true
+    },
+    {
+      "key": 1,
+      "name": "全屏广告",
+      "enable": false
+    },
+    {
+      "key": 2,
+      "name": "局部广告",
+      "enable": false
+    },
+    {
+      "key": 3,
+      "name": "分段广告",
+      "enable": false
+    },
+    {
+      "key": 4,
+      "name": "综合广告",
+      "enable": false
+    }
+  ],
+  "globalGroups": [
+    {
+      "key": 105,
+      "name": "开屏广告-全局",
+      "desc": "关闭打开应用时的开屏广告",
+      "order": -10,
+      "fastQuery": true,
+      "matchTime": 10000,
+      "actionMaximum": 2,
+      "resetMatch": "app",
+      "forcedTime": 10000,
+      "actionCdKey": 223,
+      "actionMaximumKey": 223,
+      "priorityTime": 10000,
+      "disableIfAppGroupMatch": "开屏广告",
+      "rules": [
+        {
+          "key": 223,
+          "excludeMatches": "([text=\"Submit\" || text=\"书签\" || text=\"NEXT\" || text=\"覆盖\" || text*=\"阅读并同意\" || text=\"跳过空白\"][visibleToUser=true]) || ([text*=\"搜索\" || text=\"历史记录\" || text$=\"在搜\"][text.length>3 && text.length<7][visibleToUser=true]) || ([text$=\"设置\" || text*=\"跳过片\"][text.length<10][visibleToUser=true]) || ([text^=\"选择\"][text*=\"偏好\" || text*=\"兴趣\" || text*=\"喜好\" || text*=\"行业\"][text.length<10][visibleToUser=true])",
+          "anyMatches": [
+            "[text*=\"跳过\"][text.length<10][width<500 && height<300][visibleToUser=true]",
+            "@[name$=\"View\" || name$=\"LinearLayout\"][clickable=true][childCount<2][width<300 && height<200] - [text=\"互动广告\"][visibleToUser=true]",
+            "[childCount=0][visibleToUser=true][width<500 && height<300][(text.length<10 && (text*=\"跳过\" || text*=\"跳 过\" || text*=\"跳過\" || text~=\"(?is).*skip.*\") && text!*=\"视频\" && text!*=\"片头\" && text!*=\"片尾\") || (vid~=\"(?is).*skip.*\" && vid!~=\"(?is).*video.*\" && vid!~=\"(?is).*head.*\" && vid!~=\"(?is).*tail.*\" && !(text=\"帮助\") && !(text=\"取消\") && !(text*=\"退出\")) || id$=\"tt_splash_skip_btn\" || (desc.length<10 && (desc*=\"跳过\" || desc*=\"跳過\" || desc~=\"(?is).*skip.*\"))]"
+          ],
+          "matchAnyApp": false,
+          "matchLauncher": false,
+          "apps": [
+            {
+              "id": "bin.mt.plus",
+              "enable": false
+            },
+            {
+              "id": "cmb.pb",
+              "enable": true
+            },
+            {
+              "id": "cn.wenyu.bodian",
+              "enable": false
+            },
+            {
+              "id": "com.android.vending",
+              "enable": false
+            },
+            {
+              "id": "com.anthropic.claude",
+              "enable": true
+            },
+            {
+              "id": "com.autonavi.minimap",
+              "enable": false
+            },
+            {
+              "id": "com.azure.authenticator",
+              "enable": false
+            },
+            {
+              "id": "com.bilibili.app.in",
+              "enable": true
+            },
+            {
+              "id": "com.ccnu.jx.xiaoya",
+              "enable": true
+            },
+            {
+              "id": "com.coloros.weather2",
+              "enable": false
+            },
+            {
+              "id": "com.dragon.read.oversea.gp",
+              "enable": true
+            },
+            {
+              "id": "com.eg.android.AlipayGphone",
+              "enable": false
+            },
+            {
+              "id": "com.finshell.wallet",
+              "enable": true
+            },
+            {
+              "id": "com.flyersoft.moonreaderp",
+              "enable": true
+            },
+            {
+              "id": "com.follow.clash",
+              "enable": true
+            },
+            {
+              "id": "com.github.android",
+              "enable": false
+            },
+            {
+              "id": "com.github.zly2006.zhplus.lite",
+              "enable": true
+            },
+            {
+              "id": "com.google.android.apps.authenticator2",
+              "enable": true
+            },
+            {
+              "id": "com.greenpoint.android.mc10086.activity",
+              "enable": false
+            },
+            {
+              "id": "com.huawei.smartaudio",
+              "enable": true
+            },
+            {
+              "id": "com.icbc",
+              "enable": true
+            },
+            {
+              "id": "com.ifreedomer.flix",
+              "enable": true
+            },
+            {
+              "id": "com.jaemobird.mutongji",
+              "enable": true
+            },
+            {
+              "id": "com.jingdong.app.mall",
+              "enable": false
+            },
+            {
+              "id": "com.max.xiaoheihe",
+              "enable": true
+            },
+            {
+              "id": "com.microsoft.emmx",
+              "enable": false
+            },
+            {
+              "id": "com.midea.vm.washer",
+              "enable": false
+            },
+            {
+              "id": "com.MobileTicket",
+              "enable": false
+            },
+            {
+              "id": "com.netease.uu",
+              "enable": true
+            },
+            {
+              "id": "com.openai.chatgpt",
+              "enable": false
+            },
+            {
+              "id": "com.perol.play.pixez",
+              "enable": false
+            },
+            {
+              "id": "com.qidian.QDReader",
+              "enable": false
+            },
+            {
+              "id": "com.ss.android.ugc.aweme",
+              "enable": false
+            },
+            {
+              "id": "com.steampy.app",
+              "enable": false
+            },
+            {
+              "id": "com.suda.yzune.wakeupschedule",
+              "enable": false
+            },
+            {
+              "id": "com.taobao.idlefish",
+              "enable": false
+            },
+            {
+              "id": "com.taobao.taobao",
+              "enable": false
+            },
+            {
+              "id": "com.tencent.mm",
+              "enable": false
+            },
+            {
+              "id": "com.tencent.mobileqq",
+              "enable": false
+            },
+            {
+              "id": "com.tmri.app.main",
+              "enable": false
+            },
+            {
+              "id": "com.valvesoftware.android.steam.community",
+              "enable": false
+            },
+            {
+              "id": "com.whxinna.userplatform",
+              "enable": false
+            },
+            {
+              "id": "com.x8bit.bitwarden",
+              "enable": false
+            },
+            {
+              "id": "com.xunmeng.pinduoduo",
+              "enable": false
+            },
+            {
+              "id": "dev.dimension.flare",
+              "enable": true
+            },
+            {
+              "id": "io.legato.kazusa",
+              "enable": true
+            },
+            {
+              "id": "li.songe.gkd",
+              "enable": false
+            },
+            {
+              "id": "org.telegram.messenger.web",
+              "enable": false
+            }
+          ]
+        },
+        {
+          "key": 224,
+          "anyMatches": [
+            "@View[text=null][clickable=true][childCount=0][visibleToUser=true][width<200&&height<200] +(1,2) TextView[index=parent.childCount.minus(1)][childCount=0] <n FrameLayout[childCount>2][text=null][desc=null] >(n+6) [text*=\"第三方应用\" || text*=\"扭动手机\" || text*=\"点击或上滑\" || text*=\"省钱好物\" || text*=\"扭一扭\"][visibleToUser=true]",
+            "FrameLayout > FrameLayout[childCount>2][text=null][desc=null] > @View[text=null][clickable=true][childCount=0][visibleToUser=true][width<200&&height<200] +(1,2) TextView[index=parent.childCount.minus(1)][childCount=0][visibleToUser=true]"
+          ],
+          "matchAnyApp": false,
+          "matchLauncher": false,
+          "apps": [
+            {
+              "id": "bin.mt.plus",
+              "enable": false
+            },
+            {
+              "id": "cmb.pb",
+              "enable": true
+            },
+            {
+              "id": "cn.wenyu.bodian",
+              "enable": false
+            },
+            {
+              "id": "com.android.vending",
+              "enable": false
+            },
+            {
+              "id": "com.anthropic.claude",
+              "enable": true
+            },
+            {
+              "id": "com.autonavi.minimap",
+              "enable": false
+            },
+            {
+              "id": "com.azure.authenticator",
+              "enable": false
+            },
+            {
+              "id": "com.bilibili.app.in",
+              "enable": true
+            },
+            {
+              "id": "com.ccnu.jx.xiaoya",
+              "enable": true
+            },
+            {
+              "id": "com.coloros.weather2",
+              "enable": false
+            },
+            {
+              "id": "com.dragon.read.oversea.gp",
+              "enable": true
+            },
+            {
+              "id": "com.eg.android.AlipayGphone",
+              "enable": false
+            },
+            {
+              "id": "com.finshell.wallet",
+              "enable": true
+            },
+            {
+              "id": "com.flyersoft.moonreaderp",
+              "enable": true
+            },
+            {
+              "id": "com.follow.clash",
+              "enable": true
+            },
+            {
+              "id": "com.github.android",
+              "enable": false
+            },
+            {
+              "id": "com.github.zly2006.zhplus.lite",
+              "enable": true
+            },
+            {
+              "id": "com.google.android.apps.authenticator2",
+              "enable": true
+            },
+            {
+              "id": "com.greenpoint.android.mc10086.activity",
+              "enable": false
+            },
+            {
+              "id": "com.huawei.smartaudio",
+              "enable": true
+            },
+            {
+              "id": "com.icbc",
+              "enable": true
+            },
+            {
+              "id": "com.ifreedomer.flix",
+              "enable": true
+            },
+            {
+              "id": "com.jaemobird.mutongji",
+              "enable": true
+            },
+            {
+              "id": "com.jingdong.app.mall",
+              "enable": false
+            },
+            {
+              "id": "com.max.xiaoheihe",
+              "enable": true
+            },
+            {
+              "id": "com.microsoft.emmx",
+              "enable": false
+            },
+            {
+              "id": "com.midea.vm.washer",
+              "enable": false
+            },
+            {
+              "id": "com.MobileTicket",
+              "enable": false
+            },
+            {
+              "id": "com.netease.uu",
+              "enable": true
+            },
+            {
+              "id": "com.openai.chatgpt",
+              "enable": false
+            },
+            {
+              "id": "com.perol.play.pixez",
+              "enable": false
+            },
+            {
+              "id": "com.qidian.QDReader",
+              "enable": false
+            },
+            {
+              "id": "com.ss.android.ugc.aweme",
+              "enable": false
+            },
+            {
+              "id": "com.steampy.app",
+              "enable": false
+            },
+            {
+              "id": "com.suda.yzune.wakeupschedule",
+              "enable": false
+            },
+            {
+              "id": "com.taobao.idlefish",
+              "enable": false
+            },
+            {
+              "id": "com.taobao.taobao",
+              "enable": false
+            },
+            {
+              "id": "com.tencent.mm",
+              "enable": false
+            },
+            {
+              "id": "com.tencent.mobileqq",
+              "enable": false
+            },
+            {
+              "id": "com.tmri.app.main",
+              "enable": false
+            },
+            {
+              "id": "com.valvesoftware.android.steam.community",
+              "enable": false
+            },
+            {
+              "id": "com.whxinna.userplatform",
+              "enable": false
+            },
+            {
+              "id": "com.x8bit.bitwarden",
+              "enable": false
+            },
+            {
+              "id": "com.xunmeng.pinduoduo",
+              "enable": false
+            },
+            {
+              "id": "dev.dimension.flare",
+              "enable": true
+            },
+            {
+              "id": "io.legato.kazusa",
+              "enable": true
+            },
+            {
+              "id": "li.songe.gkd",
+              "enable": false
+            },
+            {
+              "id": "org.telegram.messenger.web",
+              "enable": false
+            }
+          ]
+        }
+      ],
+      "apps": [
+        {
+          "id": "bin.mt.plus",
+          "enable": false
+        },
+        {
+          "id": "cmb.pb",
+          "enable": true
+        },
+        {
+          "id": "cn.wenyu.bodian",
+          "enable": false
+        },
+        {
+          "id": "com.android.vending",
+          "enable": false
+        },
+        {
+          "id": "com.anthropic.claude",
+          "enable": true
+        },
+        {
+          "id": "com.autonavi.minimap",
+          "enable": false
+        },
+        {
+          "id": "com.azure.authenticator",
+          "enable": false
+        },
+        {
+          "id": "com.bilibili.app.in",
+          "enable": true
+        },
+        {
+          "id": "com.ccnu.jx.xiaoya",
+          "enable": true
+        },
+        {
+          "id": "com.coloros.weather2",
+          "enable": false
+        },
+        {
+          "id": "com.dragon.read.oversea.gp",
+          "enable": true
+        },
+        {
+          "id": "com.eg.android.AlipayGphone",
+          "enable": false
+        },
+        {
+          "id": "com.finshell.wallet",
+          "enable": true
+        },
+        {
+          "id": "com.flyersoft.moonreaderp",
+          "enable": true
+        },
+        {
+          "id": "com.follow.clash",
+          "enable": true
+        },
+        {
+          "id": "com.github.android",
+          "enable": false
+        },
+        {
+          "id": "com.github.zly2006.zhplus.lite",
+          "enable": true
+        },
+        {
+          "id": "com.google.android.apps.authenticator2",
+          "enable": true
+        },
+        {
+          "id": "com.greenpoint.android.mc10086.activity",
+          "enable": false
+        },
+        {
+          "id": "com.huawei.smartaudio",
+          "enable": true
+        },
+        {
+          "id": "com.icbc",
+          "enable": true
+        },
+        {
+          "id": "com.ifreedomer.flix",
+          "enable": true
+        },
+        {
+          "id": "com.jaemobird.mutongji",
+          "enable": true
+        },
+        {
+          "id": "com.jingdong.app.mall",
+          "enable": false
+        },
+        {
+          "id": "com.max.xiaoheihe",
+          "enable": true
+        },
+        {
+          "id": "com.microsoft.emmx",
+          "enable": false
+        },
+        {
+          "id": "com.midea.vm.washer",
+          "enable": false
+        },
+        {
+          "id": "com.MobileTicket",
+          "enable": false
+        },
+        {
+          "id": "com.netease.uu",
+          "enable": true
+        },
+        {
+          "id": "com.openai.chatgpt",
+          "enable": false
+        },
+        {
+          "id": "com.perol.play.pixez",
+          "enable": false
+        },
+        {
+          "id": "com.qidian.QDReader",
+          "enable": false
+        },
+        {
+          "id": "com.ss.android.ugc.aweme",
+          "enable": false
+        },
+        {
+          "id": "com.steampy.app",
+          "enable": false
+        },
+        {
+          "id": "com.suda.yzune.wakeupschedule",
+          "enable": false
+        },
+        {
+          "id": "com.taobao.idlefish",
+          "enable": false
+        },
+        {
+          "id": "com.taobao.taobao",
+          "enable": false
+        },
+        {
+          "id": "com.tencent.mm",
+          "enable": false
+        },
+        {
+          "id": "com.tencent.mobileqq",
+          "enable": false
+        },
+        {
+          "id": "com.tmri.app.main",
+          "enable": false
+        },
+        {
+          "id": "com.valvesoftware.android.steam.community",
+          "enable": false
+        },
+        {
+          "id": "com.whxinna.userplatform",
+          "enable": false
+        },
+        {
+          "id": "com.x8bit.bitwarden",
+          "enable": false
+        },
+        {
+          "id": "com.xunmeng.pinduoduo",
+          "enable": false
+        },
+        {
+          "id": "dev.dimension.flare",
+          "enable": true
+        },
+        {
+          "id": "io.legato.kazusa",
+          "enable": true
+        },
+        {
+          "id": "li.songe.gkd",
+          "enable": false
+        },
+        {
+          "id": "org.telegram.messenger.web",
+          "enable": false
+        }
+      ],
+      "enable": true,
+      "matchAnyApp": false,
+      "matchLauncher": false
+    }
+  ],
+  "apps": [
+    {
+      "id": "bin.mt.plus",
+      "name": "MT管理器",
+      "groups": [
+        {
+          "key": 1,
+          "name": "全屏广告-优惠活动弹窗",
+          "fastQuery": true,
+          "matchTime": 14000,
+          "actionMaximum": 1,
+          "resetMatch": "app",
+          "rules": [
+            {
+              "activityIds": ".Main",
+              "matches": "[text*=\"活动\"] < * < LinearLayout +n ScrollView[index=parent.childCount.minus(1)] >(1,2) [text=\"开通会员\"] - [text=\"关闭\"]",
+              "key": 1
+            }
+          ],
+          "enable": false
+        }
+      ]
+    },
+    {
+      "id": "cmb.pb",
+      "name": "招商银行",
+      "groups": [
+        {
+          "key": 2,
+          "name": "局部广告-首页活动悬浮广告",
+          "fastQuery": true,
+          "matchTime": 10000,
+          "actionMaximum": 1,
+          "resetMatch": "app",
+          "rules": [
+            {
+              "activityIds": ".app.mainframe.container.PBMainActivity",
+              "matches": "[vid=\"float_window\"] > [vid=\"ivCancle\"][clickable=true]",
+              "key": 2
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 3,
+          "name": "全屏广告-弹窗广告",
+          "rules": [
+            {
+              "key": 3,
+              "activityIds": ".app.h5container.webviewcontainer.PBWebContainerActivity",
+              "matches": "[id=\"cover-img\"] + [text=\"关闭推荐\"]"
+            },
+            {
+              "key": 4,
+              "fastQuery": true,
+              "activityIds": "com.pb.marketing.PopupWindowActivity",
+              "matches": "[desc^=\"活动图片\"] + [vid=\"ivCancle\"][desc=\"关闭\"]"
+            }
+          ],
+          "enable": false
+        }
+      ]
+    },
+    {
+      "id": "cn.wenyu.bodian",
+      "name": "波点音乐",
+      "groups": [
+        {
+          "key": 4,
+          "name": "开屏广告",
+          "matchTime": 10000,
+          "actionMaximum": 2,
+          "resetMatch": "app",
+          "priorityTime": 10000,
+          "rules": [
+            {
+              "fastQuery": true,
+              "action": "clickCenter",
+              "matches": "[text*=\"跳过\"][text.length<10][width<500 && height<300][visibleToUser=true]",
+              "key": 5
+            }
+          ],
+          "order": -10,
+          "enable": true
+        },
+        {
+          "key": 5,
+          "name": "全屏广告",
+          "rules": [
+            {
+              "activityIds": ".MainActivity",
+              "matches": "@TextView[width<130&&height<130][clickable=true] + * > [text=\"开会员享专属曲库\"]",
+              "key": 6
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 6,
+          "name": "局部广告",
+          "rules": [
+            {
+              "key": 7,
+              "activityIds": ".MainActivity",
+              "matches": "ImageView[desc=\"广告\"][clickable=true][visibleToUser=true]"
+            },
+            {
+              "key": 8,
+              "activityIds": ".MainActivity",
+              "matches": "[desc$=\"广告\"] > ImageView[index=1][width=height][clickable=true][visibleToUser=true]"
+            }
+          ],
+          "enable": false
+        }
+      ]
+    },
+    {
+      "id": "com.android.vending",
+      "name": "Google Play 商店",
+      "groups": [
+        {
+          "key": 7,
+          "name": "全屏广告-弹窗广告",
+          "desc": "点击[以后再说]/[不用了]",
+          "fastQuery": true,
+          "actionMaximum": 1,
+          "resetMatch": "app",
+          "rules": [
+            {
+              "key": 9,
+              "position": {
+                "left": "width * 0.5",
+                "top": "height * 0.75"
+              },
+              "activityIds": "com.google.android.finsky.activities.MainActivity",
+              "matches": "@LinearLayout[childCount=0][visibleToUser=true] -3 [text^=\"体验\" || text^=\"隆重推出\"]"
+            },
+            {
+              "key": 10,
+              "activityIds": "com.google.android.finsky.activities.MainActivity",
+              "matches": "[text=\"以后再说\" || text=\"不用了\" || text=\"No thanks\" || text=\"Not now\"][visibleToUser=true]"
+            }
+          ],
+          "enable": false
+        }
+      ]
+    },
+    {
+      "id": "com.autonavi.minimap",
+      "name": "高德地图",
+      "groups": [
+        {
+          "key": 8,
+          "name": "开屏广告",
+          "fastQuery": true,
+          "matchTime": 10000,
+          "actionMaximum": 1,
+          "resetMatch": "app",
+          "priorityTime": 10000,
+          "rules": [
+            {
+              "matches": "[text*=\"跳过\"][text.length<10][width<500 && height<300][visibleToUser=true]",
+              "key": 11
+            }
+          ],
+          "order": -10,
+          "enable": true
+        },
+        {
+          "key": 9,
+          "name": "局部广告-首页上方消息提醒",
+          "matchTime": 10000,
+          "actionMaximum": 1,
+          "resetMatch": "app",
+          "activityIds": "com.autonavi.map.activity.NewMapActivity",
+          "rules": [
+            {
+              "key": 12,
+              "matches": "RelativeLayout[desc=\"弹窗\"] > [vid=\"msgbox_popup_clear\"]"
+            },
+            {
+              "key": 13,
+              "fastQuery": true,
+              "matches": "@ImageView[clickable=true] - [text=\"广告\"]"
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 10,
+          "name": "局部广告-首页签到卡片",
+          "desc": "点击\"x\"",
+          "actionMaximum": 1,
+          "resetMatch": "app",
+          "activityIds": "com.autonavi.map.activity.NewMapActivity",
+          "rules": [
+            {
+              "matches": "ImageView[visibleToUser=true][width<90][height<90] < @ViewGroup -(2) ViewGroup > ViewGroup > View[text*=\"签到\"||text*=\"成长值\"]",
+              "key": 14
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 11,
+          "name": "局部广告-卡片广告",
+          "desc": "点击关闭",
+          "rules": [
+            {
+              "key": 15,
+              "fastQuery": true,
+              "activityIds": "com.autonavi.map.activity.NewMapActivity",
+              "matches": [
+                "[vid=\"btn_qrscan\"][desc=\"扫一扫\"]",
+                "ViewGroup[desc.length>0] < ViewGroup + @[desc=\"关闭\"][clickable=true][visibleToUser=true] <<n [vid=\"quickservice\"]"
+              ]
+            },
+            {
+              "key": 16,
+              "fastQuery": true,
+              "activityIds": "com.autonavi.map.activity.NewMapActivity",
+              "matches": "ViewGroup[desc=\"图片\"][childCount=2] > ViewGroup[clickable=true] > @ImageView[childCount=0] <<n [vid=\"tab_container_id\"]"
+            },
+            {
+              "key": 17,
+              "fastQuery": true,
+              "activityIds": "com.autonavi.map.activity.NewMapActivity",
+              "matches": "@ImageView[childCount=0] < ViewGroup[clickable=true] -2 * > View[text^=\"高德购票\" && text$=\"优惠\"] <<n [vid=\"mapInteractiveRelativeLayout\"]"
+            },
+            {
+              "key": 18,
+              "fastQuery": true,
+              "activityIds": "com.autonavi.map.activity.NewMapActivity",
+              "matches": "@[clickable=true] > [visibleToUser=true][text=\"关闭\"] <<n [vid=\"ajx_view_container\"]"
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 12,
+          "name": "全屏广告",
+          "desc": "点击关闭",
+          "rules": [
+            {
+              "key": 19,
+              "name": "[欢迎]弹窗",
+              "fastQuery": true,
+              "activityIds": "com.autonavi.map.activity.NewMapActivity",
+              "matches": "ViewGroup[childCount=6] >4 ViewGroup[childCount=5] > @ImageView[clickable=true] + View[text!=null] <<n [vid=\"fragment_container\"]"
+            },
+            {
+              "key": 20,
+              "name": "签到弹窗",
+              "fastQuery": true,
+              "activityIds": "com.autonavi.map.activity.NewMapActivity",
+              "matches": "[vid=\"main_map_msg_dialog_close\"]"
+            },
+            {
+              "key": 21,
+              "fastQuery": true,
+              "activityIds": "com.autonavi.map.activity.NewMapActivity",
+              "matches": "@ViewGroup[clickable=true] > View[visibleToUser=true][text^=\"关闭\"] <<n [vid=\"mapInteractiveRelativeLayout\"]"
+            }
+          ],
+          "enable": false
+        }
+      ]
+    },
+    {
+      "id": "com.coloros.weather2",
+      "name": "天气",
+      "groups": [
+        {
+          "key": 13,
+          "name": "分段广告-卡片广告",
+          "desc": "点击关闭",
+          "fastQuery": true,
+          "activityIds": "com.oplus.weather.main.view.WeatherMainActivity",
+          "rules": [
+            {
+              "key": 22,
+              "matches": "[vid=\"feed_close\"]"
+            },
+            {
+              "preKeys": [
+                22
+              ],
+              "matches": "@[clickable=true] >(1,2) [text=\"不感兴趣\"]",
+              "key": 23
+            }
+          ],
+          "enable": false
+        }
+      ]
+    },
+    {
+      "id": "com.eg.android.AlipayGphone",
+      "name": "支付宝",
+      "groups": [
+        {
+          "key": 14,
+          "name": "全屏广告-小组件弹窗",
+          "desc": "点击[关闭/近期不再提醒我]",
+          "rules": [
+            {
+              "key": 24,
+              "fastQuery": true,
+              "activityIds": "com.alipay.android.msp.ui.views.MspContainerActivity",
+              "matches": [
+                "[text=\"设置支付宝小组件\"]",
+                "@[clickable=true] > [text=\"关闭\"]"
+              ]
+            },
+            {
+              "key": 25,
+              "fastQuery": true,
+              "activityIds": "com.alipay.mobile.nebulax.xriver.activity.XRiverActivity",
+              "excludeActivityIds": "com.alipay.mobile.nebulax.xriver.activity.XRiverActivity$",
+              "matches": "@Image[width<80 && height<80][visibleToUser=true] < View < View < View < View < WebView[text*=\"半浮层容器\"] < WebView <2 * < * < [id=\"android:id/content\"]"
+            },
+            {
+              "key": 26,
+              "activityIds": [
+                "com.alipay.mobile.nebulax.integration.mpaas.activity.NebulaActivity$Main",
+                "com.alipay.mobile.nebulax.xriver.activity.XRiverActivity"
+              ],
+              "excludeActivityIds": "com.alipay.mobile.nebulax.xriver.activity.XRiverActivity$",
+              "matches": "[text^=\"去\"][text.length>2] + [text=\"近期不再提醒我\"]"
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 15,
+          "name": "全屏广告-借呗消费信贷协议",
+          "desc": "点击X",
+          "rules": [
+            {
+              "activityIds": "com.alipay.mobile.nebulax.integration.mpaas.activity.NebulaActivity$Main",
+              "matches": "[text=\"同意协议并刷脸验证\"] < * -4 * >2 Image[visibleToUser=true]",
+              "key": 27
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 16,
+          "name": "全屏广告-弹窗广告",
+          "desc": "点击关闭",
+          "fastQuery": true,
+          "rules": [
+            {
+              "key": 28,
+              "activityIds": ".AlipayLogin",
+              "matches": "@ImageView[desc=\"关闭\"][clickable=true] < LinearLayout - [id=\"com.alipay.mobile.advertisement:id/standardlayer_contentview\"][desc=\"推荐广告\"]"
+            },
+            {
+              "key": 29,
+              "forcedTime": 10000,
+              "activityIds": [
+                "com.alipay.mobile.nebulax.integration.mpaas.activity.NebulaActivity$Main",
+                "com.alipay.mobile.nebulax.xriver.activity.XRiverActivity"
+              ],
+              "excludeActivityIds": "com.alipay.mobile.nebulax.xriver.activity.XRiverActivity$",
+              "matches": "@TextView[id=desc][text=\"\"][visibleToUser=true][width<110][height<110][top>getPrev(1).height.div(2)][left<getPrev(1).width.div(2)][right>getPrev(1).width.div(2)] <(2,3) View[childCount>1] <<n [id=\"com.alipay.mobile.nebula:id/h5_pc_container\"]"
+            },
+            {
+              "key": 30,
+              "activityIds": "com.alipay.mobile.nebulax.xriver.activity.XRiverActivity",
+              "excludeActivityIds": "com.alipay.mobile.nebulax.xriver.activity.XRiverActivity$",
+              "matches": "@[text*=\"跳过\"] + [visibleToUser=true][text^=\"账单分期还\"] <<n [id=\"com.alipay.mobile.nebula:id/h5_pc_container\"]"
+            },
+            {
+              "key": 31,
+              "activityIds": "com.alipay.mobile.nebulax.xriver.activity.XRiverActivity",
+              "excludeActivityIds": "com.alipay.mobile.nebulax.xriver.activity.XRiverActivity$",
+              "matches": "Image[visibleToUser=true][text=\"关闭弹屏\"]"
+            },
+            {
+              "key": 32,
+              "activityIds": ".AlipayLogin",
+              "matches": "@[text=\"我知道了\"][clickable=true] -n [text^=\"用碰一下支付\"]"
+            },
+            {
+              "key": 33,
+              "name": "⑤坐标点击x掉",
+              "activityIds": ".AlipayLogin",
+              "position": {
+                "left": "width * 0.5",
+                "top": "width * 1.3792"
+              },
+              "matches": "View[width=getPrev(2).width][height=getPrev(2).height] < ViewGroup - * ->2 @ImageView < [visibleToUser=true] < FrameLayout - View < ViewGroup[childCount=3] < * < * < * < FrameLayout - [vid=\"alipaylogin_layout\"]"
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 17,
+          "name": "全屏广告-支付后的推荐弹窗",
+          "desc": "点击关闭",
+          "fastQuery": true,
+          "activityIds": "com.alipay.android.msp.ui.views.MspContainerActivity",
+          "rules": [
+            {
+              "key": 34,
+              "matches": [
+                "[text$=\"推荐你\"][visibleToUser=true]",
+                "@[clickable=true] > [text=\"关闭\"]"
+              ]
+            },
+            {
+              "key": 35,
+              "name": "花呗开通提示",
+              "matches": [
+                "[text*=\"花呗\"][text^=\"开通\" || text^=\"下次支付\"]",
+                "@[clickable=true] > [text=\"关闭\"]"
+              ]
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 18,
+          "name": "分段广告-扫码乘车后出现的广告",
+          "desc": "点击[展开更多]-点击[对该内容不感兴趣]",
+          "fastQuery": true,
+          "activityIds": "com.alipay.android.phone.wallet.aptrip.ui.activity.result.ResultPageActivityV2",
+          "rules": [
+            {
+              "key": 36,
+              "name": "点击[展开更多]",
+              "matches": "@[desc=\"展开更多选项\"] - * >2 [text=\"广告\"]"
+            },
+            {
+              "key": 37,
+              "preKeys": [
+                36
+              ],
+              "name": "点击[对该内容不感兴趣]",
+              "matches": "@RelativeLayout[clickable=true] >2 [text$=\"内容不感兴趣\"]"
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 19,
+          "name": "全屏广告-关闭免密支付广告",
+          "actionMaximum": 1,
+          "rules": [
+            {
+              "key": 38,
+              "fastQuery": true,
+              "activityIds": "com.alipay.android.msp.ui.views.MspContainerActivity",
+              "matches": "@[checked=true] < FrameLayout - [text*=\"免密\"][text$=\"支付\"]"
+            },
+            {
+              "key": 39,
+              "fastQuery": true,
+              "activityIds": "com.alipay.android.msp.ui.views.MspContainerActivity",
+              "matches": [
+                "[text^=\"开通\"][text$=\"免密支付\" || text*=\"极速付款\"][visibleToUser=true]",
+                "@[clickable=true] > [text=\"不感兴趣\"][visibleToUser=true]"
+              ]
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 20,
+          "name": "分段广告-服务消息页面卡片广告",
+          "desc": "点击关闭-不感兴趣",
+          "fastQuery": true,
+          "activityIds": [
+            "com.alipay.android.phone.messageboxapp.ui.MsgBoxTabActivity",
+            "com.alipay.android.phone.msgboxapp.ui.activity.MBoxTabPageActivity"
+          ],
+          "rules": [
+            {
+              "key": 40,
+              "matches": "@[clickable=true] > [text=\"广告\"]"
+            },
+            {
+              "preKeys": [
+                40
+              ],
+              "key": 41,
+              "matches": "@[clickable=true] >2 [text=\"不感兴趣\"]"
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 21,
+          "name": "局部广告-卡片广告",
+          "desc": "点击关闭",
+          "fastQuery": true,
+          "rules": [
+            {
+              "key": 42,
+              "matchRoot": true,
+              "forcedTime": 10000,
+              "activityIds": [
+                "com.alipay.mobile.nebulax.integration.mpaas.activity.NebulaActivity$Main",
+                "com.alipay.mobile.nebulax.xriver.activity.XRiverActivity"
+              ],
+              "excludeActivityIds": "com.alipay.mobile.nebulax.xriver.activity.XRiverActivity$",
+              "matches": "WebView[text=\"基金\"] >(2,3) View[childCount=3] > @TextView[clickable=true][visibleToUser=true][text=\"\"] <<n [id=\"com.alipay.mobile.nebula:id/h5_pc_container\"]"
+            },
+            {
+              "key": 43,
+              "activityIds": "com.alipay.mobile.nebulax.xriver.activity.XRiverActivity",
+              "excludeActivityIds": "com.alipay.mobile.nebulax.xriver.activity.XRiverActivity$",
+              "matches": "View[childCount=3] >4 View[childCount=6] > @TextView[index=2][clickable=true][visibleToUser=true] <<n [id=\"com.alipay.mobile.nebula:id/h5_pc_container\"]"
+            },
+            {
+              "key": 44,
+              "name": "余额宝广告",
+              "activityIds": "com.alipay.mobile.nebulax.xriver.activity.XRiverActivity",
+              "excludeActivityIds": "com.alipay.mobile.nebulax.xriver.activity.XRiverActivity$",
+              "matches": "[childCount=4] > @TextView[width<50 && height<50] -n [visibleToUser=true][text=\"去看看\"]"
+            },
+            {
+              "key": 45,
+              "name": "余额宝转出-询问转出原因",
+              "activityIds": "com.alipay.mobile.nebulax.xriver.activity.XRiverActivity",
+              "excludeActivityIds": "com.alipay.mobile.nebulax.xriver.activity.XRiverActivity$",
+              "matches": "@TextView[text=\"15天内不再询问\"][clickable=true] -n [visibleToUser=true][text$=\"转出原因\"]"
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 22,
+          "name": "开屏广告-小程序开屏广告",
+          "desc": "①点击[跳过] ②坐标点击[关闭]",
+          "fastQuery": true,
+          "matchTime": 10000,
+          "actionMaximum": 1,
+          "resetMatch": "match",
+          "priorityTime": 10000,
+          "activityIds": "com.alipay.mobile.nebulax.xriver.activity.XRiverActivity$",
+          "rules": [
+            {
+              "key": 46,
+              "name": "①点击[跳过]",
+              "matches": "@View[id=null][text=null][childCount=0][visibleToUser=true] < ViewGroup[id=null][text=null][childCount=1][index=parent.childCount.minus(1)] <(7,8) ViewGroup <2 ViewGroup < ViewGroup < LinearLayout < RelativeLayout <(1,2) [id=\"android:id/content\"]"
+            },
+            {
+              "key": 47,
+              "name": "②坐标点击[关闭]",
+              "position": {
+                "left": "width * 0.2490",
+                "top": "width * 0.0435"
+              },
+              "matches": "View[width=getPrev(5).width] - @ViewGroup[childCount=1][height<150][getChild(0).name$=\".View\"][visibleToUser=true] < [childCount>3] < ViewGroup < LinearLayout < RelativeLayout <2 [id=\"android:id/content\"][childCount=2]"
+            }
+          ],
+          "order": -10,
+          "enable": true
+        },
+        {
+          "key": 23,
+          "name": "局部广告-直播悬浮窗",
+          "desc": "点击关闭",
+          "activityIds": "com.alipay.mobile.nebulax.xriver.activity.XRiverActivity",
+          "excludeActivityIds": "com.alipay.mobile.nebulax.xriver.activity.XRiverActivity$",
+          "rules": [
+            {
+              "key": 48,
+              "name": "①坐标点击x掉",
+              "fastQuery": true,
+              "position": {
+                "left": "width * 0.8893",
+                "top": "width * 0.1230"
+              },
+              "matches": "[id=\"android:id/content\"][width.div(3)>prev.width] >n [id=\"com.alipay.mobile.beevideo:id/fl_bee_player_view_container\"][childCount=2][visibleToUser=true]"
+            },
+            {
+              "key": 49,
+              "matches": "@TextView[clickable=true][width<110 && height<110] +n [text=\"产品动态\"]"
+            }
+          ],
+          "enable": false
+        }
+      ]
+    },
+    {
+      "id": "com.finshell.wallet",
+      "name": "钱包",
+      "groups": [
+        {
+          "key": 24,
+          "name": "全屏广告-弹窗广告",
+          "desc": "点击关闭",
+          "matchTime": 10000,
+          "actionMaximum": 1,
+          "resetMatch": "app",
+          "rules": [
+            {
+              "fastQuery": true,
+              "activityIds": "com.finshell.homepage.WalletNativeActionActivity",
+              "matches": "[vid=\"ivClose\"][visibleToUser=true]",
+              "key": 50
+            }
+          ],
+          "enable": false
+        }
+      ]
+    },
+    {
+      "id": "com.greenpoint.android.mc10086.activity",
+      "name": "中国移动",
+      "groups": [
+        {
+          "key": 25,
+          "name": "开屏广告",
+          "fastQuery": true,
+          "matchTime": 10000,
+          "actionMaximum": 2,
+          "resetMatch": "app",
+          "actionMaximumKey": 51,
+          "priorityTime": 10000,
+          "rules": [
+            {
+              "key": 51,
+              "action": "clickCenter",
+              "matches": "[text*=\"跳过\"][text.length<10][width<500 && height<300][visibleToUser=true]"
+            },
+            {
+              "key": 52,
+              "position": {
+                "left": "width * 0.8731",
+                "top": "width * 0.1352"
+              },
+              "matches": "@FrameLayout[childCount=2] > [vid=\"ll_top_right\"][childCount=0]"
+            }
+          ],
+          "order": -10,
+          "enable": true
+        },
+        {
+          "key": 26,
+          "name": "全屏广告-首页弹窗广告",
+          "matchTime": 10000,
+          "actionMaximum": 1,
+          "resetMatch": "app",
+          "rules": [
+            {
+              "fastQuery": true,
+              "activityIds": "com.mc10086.cmcc.view.tabs.AppTabFragment",
+              "matches": "@[vid=\"close_btn\" || vid=\"iv_close_top\"] <n LinearLayout >2 [vid=\"ad_image\" || vid=\"ll_ad_logo\"]",
+              "key": 53
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 27,
+          "name": "局部广告-右侧悬浮小图标",
+          "fastQuery": true,
+          "rules": [
+            {
+              "key": 54,
+              "actionCd": 300,
+              "activityIds": "com.mc10086.cmcc.view.tabs.AppTabFragment",
+              "matches": "[vid=\"close_btn\" || vid=\"close_btn_bottom\" || vid=\"cmcc_digital_delete_float_icon_ll\"]"
+            },
+            {
+              "key": 55,
+              "activityIds": "com.mc10086.cmcc.view.tabs.AppTabFragment",
+              "matches": "[vid=\"tab_ai_tag\"] >2 [vid=\"ai_floatingBar_close\"][clickable=true]"
+            },
+            {
+              "key": 56,
+              "activityIds": "com.cmccit.webview.ac.CommonHtml5Activity",
+              "matches": "@Image[clickable=true][text!=null] <<3 WebView[text=\"余量查询\"] <<2 [vid=\"patmentwebview\"]"
+            }
+          ],
+          "enable": false
+        }
+      ]
+    },
+    {
+      "id": "com.icbc",
+      "name": "中国工商银行",
+      "groups": [
+        {
+          "key": 28,
+          "name": "全屏广告-弹窗广告",
+          "fastQuery": true,
+          "actionMaximum": 1,
+          "resetMatch": "app",
+          "rules": [
+            {
+              "activityIds": ".activity.main.MainActivity",
+              "matches": "[vid=\"tv_time\"][text*=\"跳过\"][text.length<=6]",
+              "key": 57
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 29,
+          "name": "局部广告-右下角浮标广告",
+          "rules": [
+            {
+              "fastQuery": true,
+              "activityIds": [
+                ".activity.web.ICBCWebView",
+                ".activity.main.MainActivity",
+                ".mydetail.MyDetailMainActivity"
+              ],
+              "matches": "[vid=\"iv_close_task_center\"]",
+              "key": 58
+            }
+          ],
+          "enable": false
+        }
+      ]
+    },
+    {
+      "id": "com.jingdong.app.mall",
+      "name": "京东",
+      "groups": [
+        {
+          "key": 30,
+          "name": "开屏广告",
+          "matchTime": 10000,
+          "actionMaximum": 1,
+          "resetMatch": "app",
+          "actionMaximumKey": 59,
+          "priorityTime": 10000,
+          "rules": [
+            {
+              "key": 59,
+              "fastQuery": true,
+              "excludeActivityIds": "com.jd.lib.search.view.Activity.SearchActivity",
+              "matches": "[text*=\"跳过\"][text.length<10][width<500 && height<300][visibleToUser=true]"
+            },
+            {
+              "key": 60,
+              "excludeActivityIds": "com.jd.lib.search.view.Activity.SearchActivity",
+              "matches": "[text*=\"跳过\"][text.length<10][width<500 && height<300][visibleToUser=true]"
+            }
+          ],
+          "order": -10,
+          "enable": true
+        },
+        {
+          "key": 31,
+          "name": "局部广告-购物车页面砸金蛋",
+          "desc": "点击关闭",
+          "rules": [
+            {
+              "fastQuery": true,
+              "activityIds": ".MainFrameActivity",
+              "matches": "[id=\"com.jd.lib.cart.feature:id/iv_egg_close\"]",
+              "key": 61
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 32,
+          "name": "局部广告-悬浮广告",
+          "activityIds": ".MainFrameActivity",
+          "rules": [
+            {
+              "key": 62,
+              "matches": "FrameLayout + RelativeLayout > RelativeLayout > ImageView + ImageView[desc=null][visibleToUser=true]"
+            },
+            {
+              "key": 63,
+              "matches": "@ImageView[id!=null] + FrameLayout[childCount=3] > ImageView + LinearLayout + TextView"
+            },
+            {
+              "key": 64,
+              "matches": "[desc=\"关闭浮层icon\"][clickable=true][visibleToUser=true]"
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 33,
+          "name": "全屏广告-弹窗广告",
+          "rules": [
+            {
+              "key": 65,
+              "activityIds": ".MainFrameActivity",
+              "matches": "@FrameLayout[clickable=true] > [desc=\"关闭\"]",
+              "excludeMatches": "[text=\"确定\" || text=\"加入购物车\" || text*=\"购买\" || text*=\"下单\"][visibleToUser=true]"
+            },
+            {
+              "key": 66,
+              "fastQuery": true,
+              "activityIds": [
+                "com.jd.lib.cashier.complete.view.CashierCompleteActivity",
+                "com.jd.lib.jshop.jshop.JshopMainShopActivity"
+              ],
+              "matches": "[vid=\"close\"][desc=\"关闭页面\"]"
+            },
+            {
+              "key": 67,
+              "fastQuery": true,
+              "activityIds": [
+                ".MainFrameActivity",
+                "com.jd.lib.jshop.jshop.JshopMainShopActivity"
+              ],
+              "excludeMatches": [
+                "ImageView[desc=\"关闭页面\"] - [text=\"优惠券\"]",
+                "TextView[text=\"退换/售后\"][id=null]",
+                "[text=\"立即购买\"][visibleToUser=true]"
+              ],
+              "matches": "[desc=\"关闭页面\" || desc=\"关闭按钮\"][clickable=true][visibleToUser=true]"
+            },
+            {
+              "key": 68,
+              "fastQuery": true,
+              "matchTime": 10000,
+              "actionMaximum": 1,
+              "resetMatch": "app",
+              "action": "back",
+              "activityIds": ".MainFrameActivity",
+              "matches": "[text^=\"惊喜福利来袭\"][visibleToUser=true]"
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 34,
+          "name": "局部广告-横幅广告",
+          "activityIds": ".MainFrameActivity",
+          "rules": [
+            {
+              "key": 69,
+              "matches": "ImageView < FrameLayout - FrameLayout > ImageView[desc=\"关闭\"]"
+            },
+            {
+              "key": 70,
+              "fastQuery": true,
+              "matches": "@ViewGroup[clickable=true] - * > [text=\"去续费\"]"
+            },
+            {
+              "key": 71,
+              "matches": "[desc=\"吸顶楼层\"] > [desc=\"关闭按钮\"][clickable=true][visibleToUser=true]"
+            },
+            {
+              "key": 72,
+              "fastQuery": true,
+              "matches": "[id=\"com.jd.lib.cart.feature:id/plus_close\"]"
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 35,
+          "name": "局部广告-支付页面产品推荐",
+          "desc": "自动点击右上角\"x\"",
+          "activityIds": "com.jd.lib.settlement.fillorder.activity.NewFillOrderActivity",
+          "rules": [
+            {
+              "matches": "ImageView[clickable=true && desc=\"关闭\"]",
+              "key": 73
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 36,
+          "name": "全屏广告-购物车页面支付成功弹窗广告",
+          "desc": "自动点击正下方的\"x\"",
+          "rules": [
+            {
+              "fastQuery": true,
+              "activityIds": "com.jd.lib.cart.ShoppingCartNewActivity",
+              "matches": "@ImageView - ViewGroup >2 TextView[text=\"查看订单\"]",
+              "key": 74
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 37,
+          "name": "全屏广告-加入购物车后出现的弹窗",
+          "desc": "点击[继续逛]",
+          "rules": [
+            {
+              "fastQuery": true,
+              "activityIds": "com.jd.lib.productdetail.ProductDetailActivity",
+              "matches": "[text=\"继续逛\"][clickable=true]",
+              "key": 75
+            }
+          ],
+          "enable": false
+        }
+      ]
+    },
+    {
+      "id": "com.max.xiaoheihe",
+      "name": "小黑盒",
+      "groups": [
+        {
+          "key": 38,
+          "name": "局部广告-卡片广告",
+          "desc": "点击关闭",
+          "rules": [
+            {
+              "name": "收藏帖子后底部推荐关注卡片",
+              "fastQuery": true,
+              "activityIds": ".module.bbs.post.ui.activitys.WebNewsPostPageActivity",
+              "matches": "[vid=\"iv_notify_close\"]",
+              "key": 76
+            }
+          ],
+          "enable": false
+        }
+      ]
+    },
+    {
+      "id": "com.midea.vm.washer",
+      "name": "U净",
+      "groups": [
+        {
+          "key": 40,
+          "name": "开屏广告",
+          "fastQuery": true,
+          "matchTime": 10000,
+          "actionMaximum": 1,
+          "resetMatch": "app",
+          "rules": [
+            {
+              "matches": "[text*=\"跳过\"][text.length<=10]",
+              "key": 78
+            }
+          ],
+          "order": -10,
+          "enable": true
+        },
+        {
+          "key": 41,
+          "name": "全屏广告-首页-领劵",
+          "desc": "关闭",
+          "fastQuery": true,
+          "matchTime": 10000,
+          "actionMaximum": 1,
+          "resetMatch": "app",
+          "activityIds": "com.midea.vm.washer.ui.activity.IndexActivity",
+          "rules": [
+            {
+              "matches": "ImageView[id=\"com.midea.vm.washer:id/close_img\"]",
+              "key": 79
+            },
+            {
+              "matches": "@ImageView <2 * <2 FrameLayout[id=\"com.midea.vm.washer:id/bootstrap_weex_layout\"]",
+              "key": 80
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 42,
+          "name": "局部广告-首页-左侧领劵",
+          "desc": "关闭",
+          "fastQuery": true,
+          "actionMaximum": 1,
+          "resetMatch": "app",
+          "rules": [
+            {
+              "activityIds": "com.midea.vm.washer.ui.activity.IndexActivity",
+              "matches": "ImageView[id=\"com.midea.vm.washer:id/closeButton\"]",
+              "key": 81
+            }
+          ],
+          "enable": false
+        }
+      ]
+    },
+    {
+      "id": "com.MobileTicket",
+      "name": "铁路12306",
+      "groups": [
+        {
+          "key": 43,
+          "name": "开屏广告",
+          "matchTime": 10000,
+          "actionMaximum": 1,
+          "resetMatch": "app",
+          "priorityTime": 10000,
+          "rules": [
+            {
+              "fastQuery": true,
+              "matches": "[vid=\"tv_main_splash_skip\" || vid=\"tv_skip\"][visibleToUser=true]",
+              "key": 82
+            }
+          ],
+          "order": -10,
+          "enable": true
+        },
+        {
+          "key": 44,
+          "name": "局部广告-下方横幅广告",
+          "desc": "x掉",
+          "rules": [
+            {
+              "activityIds": ".ui.activity.MainActivity",
+              "matches": "[clickable=true][vid=\"iv_tip_close\"][desc^=\"关闭\"]",
+              "key": 83
+            }
+          ],
+          "enable": false
+        }
+      ]
+    },
+    {
+      "id": "com.openai.chatgpt",
+      "name": "ChatGPT",
+      "groups": [
+        {
+          "key": 45,
+          "name": "局部广告-Plus推广提示",
+          "desc": "在输入框上方提示, 点击x掉",
+          "fastQuery": true,
+          "rules": [
+            {
+              "key": 84,
+              "activityIds": ".MainActivity",
+              "matches": "@[clickable=true][getChild(0).desc=\"关闭\"] <<(-n+10)  * -> [getChild(0).text*=\"Plus\" || text*=\"Plus\"] <<(-n+12) View[childCount>=2][left!=0] <<(-n+12) [left=0][top!=0] <n [childCount>=3] <<(-n+18) [id=\"android:id/content\"]"
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 46,
+          "name": "局部广告",
+          "rules": [
+            {
+              "activityIds": ".MainActivity",
+              "matchTime": 18000,
+              "resetMatch": "app",
+              "actionMaximum": 3,
+              "matches": "Button - [desc=\"关闭\"] < @View[clickable=true][childCount=2] - * -> [text=\"获取 Plus\"] < [childCount=2] <<2 View <(2,3,4) View[childCount>=3] <<(-n+18) [id=\"android:id/content\"]",
+              "key": 85
+            }
+          ],
+          "enable": false
+        }
+      ]
+    },
+    {
+      "id": "com.qidian.QDReader",
+      "name": "起点读书",
+      "groups": [
+        {
+          "key": 47,
+          "name": "开屏广告",
+          "fastQuery": true,
+          "matchTime": 10000,
+          "actionMaximum": 1,
+          "actionMaximumKey": 86,
+          "resetMatch": "app",
+          "priorityTime": 10000,
+          "rules": [
+            {
+              "key": 86,
+              "matches": "[vid=\"splash_skip_button\"][clickable=true]"
+            },
+            {
+              "key": 87,
+              "matches": "[text*=\"跳过\"][text.length<10][clickable=true][width<500 && height<300]"
+            }
+          ],
+          "order": -10,
+          "enable": true
+        },
+        {
+          "key": 48,
+          "name": "全屏广告-弹窗广告",
+          "desc": "点击x掉",
+          "rules": [
+            {
+              "fastQuery": true,
+              "activityIds": [
+                ".ui.activity.MainGroupActivity",
+                ".framework.widget.dialog.judian",
+                ".ui.activity.BookLastPageNewActivity",
+                "com.tencent.mm.plugin.webview.ui.tools.SDKOAuthUI"
+              ],
+              "matches": "[vid=\"imgClose\" || vid=\"btnClose\"][visibleToUser=true]",
+              "key": 88
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 49,
+          "name": "局部广告-悬浮广告",
+          "rules": [
+            {
+              "fastQuery": true,
+              "activityIds": [
+                ".ui.activity.QDBookDetailActivity",
+                ".ui.activity.MainGroupActivity"
+              ],
+              "matches": "[vid=\"ivAdClose\"][clickable=true]",
+              "key": 89
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 50,
+          "name": "局部广告-信息流广告",
+          "desc": "每日导读页-游戏广告",
+          "rules": [
+            {
+              "activityIds": ".flutter.DailyReadingMainPageActivity",
+              "matches": "@ImageView[clickable=true] < [desc^=\"游戏广告\"]",
+              "key": 90
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 51,
+          "name": "全屏广告-红包弹窗",
+          "desc": "点击x掉",
+          "rules": [
+            {
+              "fastQuery": true,
+              "activityIds": [
+                ".ui.activity.hongbao_square.NewHongBaoSquareActivity",
+                ".ui.activity.MainGroupActivity",
+                ".flutter.HongBaoSquareActivity"
+              ],
+              "matches": "[vid=\"rootView\"] > [vid=\"btnHongbaoClose\"]",
+              "key": 91
+            }
+          ],
+          "enable": false
+        }
+      ]
+    },
+    {
+      "id": "com.ss.android.ugc.aweme",
+      "name": "抖音",
+      "groups": [
+        {
+          "key": 52,
+          "name": "开屏广告",
+          "matchTime": 10000,
+          "actionMaximum": 1,
+          "resetMatch": "app",
+          "priorityTime": 10000,
+          "rules": [
+            {
+              "fastQuery": true,
+              "excludeActivityIds": ".search.activity.SearchResultActivity",
+              "matches": "[text*=\"跳过\"][text.length<10][width<500 && height<300][visibleToUser=true]",
+              "key": 92
+            }
+          ],
+          "order": -10,
+          "enable": true
+        },
+        {
+          "key": 53,
+          "name": "局部广告",
+          "desc": "点击x掉",
+          "fastQuery": true,
+          "activityIds": [
+            ".live.LivePlayActivity",
+            ".detail.ui.DetailActivity"
+          ],
+          "rules": [
+            {
+              "key": 93,
+              "name": "①直播间右下角浮窗",
+              "matches": "@[width<114 && height<114][top=parent.top] <3 [childCount>4] >5 [text=\"打开游戏\" || text=\"下载\" || text=\"立即查看\"]"
+            },
+            {
+              "key": 94,
+              "name": "②直播间右下角浮窗",
+              "matches": "[desc=\"购买\"][visibleToUser=true] <n * < * -2 FrameLayout > [vid=\"iv_close\"][clickable=true]"
+            },
+            {
+              "key": 95,
+              "name": "③直播间右下角浮窗",
+              "matches": "@ViewGroup[vid=null][text=null][desc=null][width<110 && height<110][visibleToUser=true] <2 ViewGroup[childCount<8] <<5 FrameLayout[index=parent.childCount.minus(2)] <n ViewGroup[childCount>4][left=0 && top=0] +n ViewGroup >5 EditText[text=\"说点什么...\"][clickable=true][visibleToUser=true]"
+            },
+            {
+              "key": 96,
+              "name": "④视频页左下角卡片",
+              "activityIds": ".main.MainActivity",
+              "matches": "@UIView[clickable=true][id=null][text=\"\"][desc=\"\"][childCount=0] + UIText[text=\"广告\"][visibleToUser=true]"
+            },
+            {
+              "key": 97,
+              "name": "⑤视频页下载app",
+              "activityIds": ".main.MainActivity",
+              "matches": "[text=\"立即下载\"] <2 LinearLayout + @[clickable=true] > [vid=\"iv_close\"]"
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 54,
+          "name": "全屏广告-小组件弹窗",
+          "desc": "点击x掉",
+          "rules": [
+            {
+              "fastQuery": true,
+              "activityIds": [
+                ".main.MainActivity",
+                ".live.LiveDummyActivity",
+                ".search.activity.SearchResultActivity"
+              ],
+              "matches": "@ImageView[clickable=true][width<173] <2 [childCount>3] > [text^=\"添加\" || text^=\"开启\"][text*=\"桌面\"]",
+              "key": 98
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 55,
+          "name": "全屏广告",
+          "desc": "点击[不感兴趣/知道了]",
+          "fastQuery": true,
+          "activityIds": ".main.MainActivity",
+          "rules": [
+            {
+              "key": 99,
+              "matches": "@[clickable=true][text=\"不感兴趣\"] +(1,2) FlattenUIText[text=\"不感兴趣\"]"
+            },
+            {
+              "key": 100,
+              "matches": "[name!$=\"ImageView\"] + [text=\"不感兴趣\"][clickable=true]"
+            },
+            {
+              "key": 101,
+              "activityIds": [
+                ".live.LiveDummyActivity",
+                ".commerce.sdk.MallContainerActivity",
+                "com.bytedance.android.shopping.store.tabkit.container.TabKitActivity"
+              ],
+              "matches": "[text*=\"首页商城\"] +n FlattenUIText[text=\"知道了\"]"
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 56,
+          "name": "全屏广告-汽水音乐VIP",
+          "desc": "点击关闭",
+          "rules": [
+            {
+              "key": 102,
+              "fastQuery": true,
+              "activityIds": [
+                ".dsp.MusicLunaActivity",
+                ".dsp.playpage.singlepage.subpage.MusicDspSubPlayerActivity"
+              ],
+              "matches": "ScrollView - @ImageView[index=1][childCount=0][visibleToUser=true][width<100][height<100] <2 View < View < ViewGroup < ViewGroup < [id=\"android:id/content\"]"
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 57,
+          "name": "局部广告-推广视频上滑",
+          "desc": "广告/应用/购物/咨询/服务/预约/子薇剧场 等推广视频",
+          "rules": [
+            {
+              "fastQuery": true,
+              "actionCd": 300,
+              "actionDelay": 200,
+              "swipeArg": {
+                "start": {
+                  "x": "screenWidth/2",
+                  "y": "screenHeight * 0.6"
+                },
+                "end": {
+                  "x": "screenWidth/2",
+                  "y": "screenHeight * 0.3"
+                },
+                "duration": 200
+              },
+              "activityIds": ".main.MainActivity",
+              "matches": "([visibleToUser=true] > [text$=\"广告\" || text$=\"（推广）\"][vid=\"desc\" || desc=\"广告\"]) || ([text=\"应用\" || text=\"购物\" || text=\"咨询\" || text=\"服务\" || text=\"预约\" || text=\"子薇剧场\"][text.length<6][index=1][visibleToUser=true]) || (ViewGroup[childCount=5] > ImageView +3 [text^=\"已售\" || text^=\" 已售\"] - TextView - [text=\"讲解中 丨 \"][index=1][visibleToUser=true])",
+              "key": 103
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 58,
+          "name": "局部广告-直播-关闭推荐直播间",
+          "desc": "刷到直播-> 可能喜欢这些直播 -> x掉",
+          "rules": [
+            {
+              "fastQuery": true,
+              "activityIds": ".main.MainActivity",
+              "matches": "ImageView + [text=\"你可能喜欢这些直播\"][visibleToUser=true] + [vid=\"close\"][clickable=true]",
+              "key": 104
+            }
+          ],
+          "enable": false
+        }
+      ]
+    },
+    {
+      "id": "com.steampy.app",
+      "name": "SteamPY",
+      "groups": [
+        {
+          "key": 60,
+          "name": "开屏广告",
+          "fastQuery": true,
+          "matchTime": 10000,
+          "actionMaximum": 1,
+          "resetMatch": "app",
+          "rules": [
+            {
+              "matches": "[vid=\"pyAdLayout\"] > [vid=\"count_down_view\"][clickable=true]",
+              "key": 110
+            }
+          ],
+          "order": -10,
+          "enable": true
+        }
+      ]
+    },
+    {
+      "id": "com.suda.yzune.wakeupschedule",
+      "name": "WakeUp课程表",
+      "groups": [
+        {
+          "key": 62,
+          "name": "开屏广告",
+          "fastQuery": true,
+          "matchTime": 10000,
+          "actionMaximum": 1,
+          "actionMaximumKey": 112,
+          "resetMatch": "app",
+          "priorityTime": 10000,
+          "rules": [
+            {
+              "key": 112,
+              "matches": "[text*=\"跳过\"][text.length<10][width<500 && height<300][visibleToUser=true]"
+            },
+            {
+              "key": 113,
+              "matches": "@ImageView[visibleToUser=true][width<156 && height<156] < * < [width>1000] +2 ViewGroup >2 [text=\"广告\"]"
+            }
+          ],
+          "order": -10,
+          "enable": true
+        },
+        {
+          "key": 63,
+          "name": "全屏广告",
+          "rules": [
+            {
+              "fastQuery": true,
+              "activityIds": ".schedule.ScheduleActivity",
+              "matches": "[vid=\"iv_close\"][clickable=true]",
+              "key": 114
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 64,
+          "name": "局部广告",
+          "desc": "点击[关闭]",
+          "rules": [
+            {
+              "fastQuery": true,
+              "activityIds": ".schedule.ScheduleActivity",
+              "matches": "[vid=\"id_ad_close\"]",
+              "key": 115
+            }
+          ],
+          "enable": false
+        }
+      ]
+    },
+    {
+      "id": "com.taobao.idlefish",
+      "name": "闲鱼",
+      "groups": [
+        {
+          "key": 65,
+          "name": "全屏广告",
+          "desc": "点击关闭",
+          "rules": [
+            {
+              "key": 116,
+              "activityIds": ".maincontainer.activity.MainActivity",
+              "matches": "WebView[text=\"Rax App\"] > [id=\"root\"] >(3,6) View[index=parent.childCount.minus(1)][clickable=true]"
+            },
+            {
+              "key": 117,
+              "fastQuery": true,
+              "activityIds": ".search_implement.SearchResultActivity",
+              "matches": "@[index=parent.childCount.minus(1)][clickable=true][width<250][height<250] <n View <<6 m0 <<6 [vid=\"fish_layer_container_id\"]"
+            },
+            {
+              "key": 118,
+              "fastQuery": true,
+              "activityIds": "com.idlefish.flutterbridge.flutterboost.boost.FishFlutterBoostActivity",
+              "matches": "@[clickable=true][width<200] <<(4,6) View[id=\"root\"] <<(5,8) [vid=\"fish_layer_container_id\"]"
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 66,
+          "name": "分段广告-信息流广告",
+          "desc": "警告⚠️: 该规则有可能会误触,请谨慎开启",
+          "fastQuery": true,
+          "forcedTime": 100000,
+          "rules": [
+            {
+              "key": 119,
+              "action": "longClick",
+              "activityIds": ".search_implement.SearchResultActivity",
+              "matches": "@[longClickable=true] >3 [text=\"广告\"][visibleToUser=true]"
+            },
+            {
+              "key": 120,
+              "action": "longClick",
+              "activityIds": [
+                ".maincontainer.activity.MainActivity",
+                ".detail.DetailActivity"
+              ],
+              "matches": "@[longClickable=true][childCount=0][height>width] < [childCount>1] >(1,3,4) [text=\"广告\"][visibleToUser=true]"
+            },
+            {
+              "key": 121,
+              "action": "longClick",
+              "activityIds": "com.idlefish.flutterbridge.flutterboost.boost.FishFlutterBoostActivity",
+              "matches": "View[desc$=\"广告\"][longClickable=true][visibleToUser=true][childCount>2]"
+            },
+            {
+              "key": 122,
+              "name": "②点击[引起不适]",
+              "preKeys": [
+                119,
+                120,
+                121,
+                122
+              ],
+              "actionCd": 500,
+              "actionDelay": 50,
+              "activityIds": [
+                "com.idlefish.flutterbridge.flutterboost.boost.FishFlutterBoostActivity",
+                "com.idlefish.flutterbridge.flutterboost.boost.FishFlutterBoostTransparencyActivity"
+              ],
+              "matches": "[desc=\"引起不适\"][visibleToUser=true]"
+            },
+            {
+              "key": 123,
+              "name": "②点击[不感兴趣]",
+              "preKeys": [
+                120
+              ],
+              "activityIds": ".maincontainer.activity.MainActivity",
+              "matches": "@[clickable=true] +2 [text=\"商品不感兴趣\"]"
+            },
+            {
+              "key": 124,
+              "preKeys": [
+                122
+              ],
+              "name": "③仅消除preKeys=20蓄势",
+              "action": "none",
+              "actionMaximum": 1,
+              "activityIds": [
+                ".detail.DetailActivity",
+                ".maincontainer.activity.MainActivity",
+                ".search_implement.SearchResultActivity"
+              ],
+              "matches": "[parent=null]"
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 67,
+          "name": "局部广告",
+          "rules": [
+            {
+              "fastQuery": true,
+              "activityIds": ".maincontainer.activity.MainActivity",
+              "matches": "@ImageView[clickable=true][width<100] <(2,5) FrameLayout <<(3,4) [vid=\"fish_layer_container_id\"]",
+              "key": 125
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 68,
+          "name": "局部广告-悬浮广告",
+          "desc": "商品详情页右侧-x掉",
+          "rules": [
+            {
+              "fastQuery": true,
+              "activityIds": ".detail.DetailActivity",
+              "matches": "Image[width<60 && height<60] < @View <n [childCount=2] < [id=\"root\"] <<2 * <2 WebView <<2 [vid=\"fish_layer_container_id\"]",
+              "key": 126
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 69,
+          "name": "开屏广告",
+          "fastQuery": true,
+          "matchTime": 10000,
+          "actionMaximum": 1,
+          "resetMatch": "app",
+          "priorityTime": 10000,
+          "rules": [
+            {
+              "matches": "[text*=\"跳过\"][vid=\"splash_ad_close\"][visibleToUser=true]",
+              "key": 127
+            }
+          ],
+          "order": -10,
+          "enable": true
+        }
+      ]
+    },
+    {
+      "id": "com.taobao.taobao",
+      "name": "淘宝",
+      "groups": [
+        {
+          "key": 70,
+          "name": "开屏广告",
+          "fastQuery": true,
+          "matchTime": 10000,
+          "actionMaximum": 1,
+          "resetMatch": "app",
+          "priorityTime": 10000,
+          "rules": [
+            {
+              "matches": "@[vid*=\"close\"] > [text*=\"跳过\"][text.length<10][width<500 && height<300][visibleToUser=true]",
+              "key": 128
+            }
+          ],
+          "order": -10,
+          "enable": true
+        },
+        {
+          "key": 71,
+          "name": "全屏广告-弹窗广告",
+          "rules": [
+            {
+              "key": 129,
+              "fastQuery": true,
+              "activityIds": [
+                "com.taobao.tao.welcome.Welcome",
+                "com.taobao.tao.TBMainActivity",
+                "com.taobao.android.tbabilitykit.pop.StdPopContainerActivity",
+                "com.taobao.android.detail.wrapper.activity.DetailActivity",
+                "com.alibaba.android.ultron.vfw.weex2.highPerformance.widget.UltronTradeHybridActivity",
+                "com.taobao.message.activity.ChatActivity"
+              ],
+              "matches": "@[desc=\"关闭按钮\"] - [vid=\"poplayer_native_state_id\"]"
+            },
+            {
+              "key": 130,
+              "fastQuery": true,
+              "matchTime": 10000,
+              "actionMaximum": 1,
+              "resetMatch": "app",
+              "activityIds": "com.taobao.tao.welcome.Welcome",
+              "matches": "@ImageView[desc=\"图片\"][childCount=0][clickable=true][visibleToUser=true][width<180&&height<180] <<n [vid=\"poplayer_native_state_id\"]"
+            },
+            {
+              "key": 131,
+              "activityIds": "com.taobao.browser.BrowserActivity",
+              "matches": "WebView[text=\"红包签到\"] > [id=\"ice-container\"] >(3,4) View[childCount=3] > [name$=\"Image\" || name$=\"Button\"][text*=\"jpg\" || text=\"关闭\"][visibleToUser=true]"
+            },
+            {
+              "key": 132,
+              "fastQuery": true,
+              "activityIds": "com.taobao.themis.container.app.TMSActivity",
+              "matches": "[text=\"规则\"] +2 @View[childCount=1][clickable=true] > Image[childCount=0][text!=null] <<n [vid=\"tms_tab_content_view\"]"
+            },
+            {
+              "key": 133,
+              "fastQuery": true,
+              "activityIds": [
+                "com.taobao.search.uniform.SearchActivity",
+                "com.taobao.android.detail.alittdetail.TTDetailActivity",
+                "com.taobao.tao.TBMainActivity"
+              ],
+              "matches": "@[name$=\".TextView\" || name$=\".Image\"][clickable=true][childCount=0][width<150 && height<150][index=parent.childCount.minus(1)] <n View >(1,2,3) [id=null][text$=\"用\" || text$=\"收下\" || text*=\"立减\"] <<n WebView[vid=\"poplayer_inner_view\"]"
+            },
+            {
+              "key": 134,
+              "fastQuery": true,
+              "activityIds": "com.taobao.android.tbabilitykit.pop.StdPopContainerActivity",
+              "matches": "Image[text*=\".jpg\"][width<150 && height<150] < [visibleToUser=true] < @View[clickable=true][childCount=1] <<n FrameLayout[id=null] - [vid=\"layermanager_penetrate_webview_container_id\"]"
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 72,
+          "name": "局部广告-横幅广告",
+          "fastQuery": true,
+          "rules": [
+            {
+              "key": 135,
+              "name": "消息页",
+              "activityIds": [
+                "com.taobao.tao.welcome.Welcome",
+                "com.taobao.tao.TBMainActivity"
+              ],
+              "matches": "[desc.length>0 || text.length>0] + @LinearLayout[clickable=true] + FrameLayout > TextView[text=\"퀺\"]"
+            },
+            {
+              "key": 136,
+              "name": "商品详情页",
+              "activityIds": "com.taobao.android.detail.alittdetail.TTDetailActivity",
+              "matches": "@FrameLayout[desc=\"关闭\"][clickable=true][visibleToUser=true] -3 ImageView <<3 [vid=\"bottom_float_dx\"]"
+            },
+            {
+              "key": 137,
+              "name": "订单页",
+              "activityIds": "com.taobao.android.order.bundle.TBOrderListActivity",
+              "matches": "@TextView[clickable=true][visibleToUser=true][text.length=1] -4 ImageView < LinearLayout[childCount=5] <<3 [vid=\"recycler_view\"]"
+            },
+            {
+              "key": 138,
+              "name": "首页",
+              "matchRoot": true,
+              "activityIds": "com.taobao.tao.welcome.Welcome",
+              "matches": "[desc.length=4] < * + @[clickable=true] > [text=\"뉜\"]"
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 73,
+          "name": "局部广告-悬浮广告",
+          "fastQuery": true,
+          "rules": [
+            {
+              "key": 139,
+              "activityIds": "com.taobao.browser.BrowserActivity",
+              "matches": "@Image[childCount=0][clickable=true][text!=null] < View <2 View < WebView < o0 <2 WebView < [id=\"android:id/content\"]"
+            },
+            {
+              "key": 140,
+              "activityIds": "com.taobao.themis.container.app.TMSActivity",
+              "matches": "@Image[childCount=0][clickable=true][text!=null] <2 View < View < View <9 View < WebView < m0 <2 WebView < RelativeLayout < [vid=\"tms_tab_content_view\"]"
+            },
+            {
+              "key": 141,
+              "activityIds": "com.taobao.android.detail.alittdetail.TTDetailActivity",
+              "matches": "@FrameLayout[desc=\"关闭\"][clickable=true] <<n [vid=\"ll_dinamicx_container\"]"
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 74,
+          "name": "全屏广告-花呗推荐弹窗",
+          "fastQuery": true,
+          "actionMaximum": 1,
+          "rules": [
+            {
+              "key": 142,
+              "activityIds": "com.alipay.android.msp.ui.views.MspContainerActivity",
+              "matches": [
+                "[text*=\"花呗升级\" || text*=\"花呗服务\" || text$=\"开通花呗\"][visibleToUser=true]",
+                "@[clickable=true] >n [text=\"暂不升级，继续付款\" || text=\"关闭\"][visibleToUser=true]"
+              ]
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 75,
+          "name": "局部广告-商品详情页直播悬浮窗",
+          "desc": "点击关闭",
+          "fastQuery": true,
+          "matchTime": 10000,
+          "actionMaximum": 1,
+          "rules": [
+            {
+              "activityIds": "com.taobao.android.detail.wrapper.activity.DetailActivity",
+              "matches": "[vid=\"view_close\"]",
+              "key": 143
+            }
+          ],
+          "enable": false
+        }
+      ]
+    },
+    {
+      "id": "com.tencent.mm",
+      "name": "微信",
+      "groups": [
+        {
+          "key": 76,
+          "name": "分段广告-朋友圈广告",
+          "desc": "警告⚠️：该规则有可能会误触，请谨慎开启",
+          "activityIds": [
+            ".plugin.sns.ui.SnsTimeLineUI",
+            ".plugin.sns.ui.improve.ImproveSnsTimelineUI",
+            ".plugin.profile.ui.ContactInfoUI"
+          ],
+          "rules": [
+            {
+              "key": 144,
+              "name": "①点击[广告]",
+              "fastQuery": true,
+              "matches": "@LinearLayout[clickable=true] > [text=\"广告\" || text=\"廣告\" || text=\"Sponsored\"][visibleToUser=true]"
+            },
+            {
+              "key": 145,
+              "name": "①坐标点击[广告]",
+              "fastQuery": true,
+              "actionDelay": 300,
+              "position": {
+                "left": "width * 0.9223",
+                "top": "height * 0.5"
+              },
+              "anyMatches": [
+                "@LinearLayout >2 [text=\"广告\"][visibleToUser=false]",
+                "[index=parent.childCount.minus(1)] >5 [getChild(0).desc$=\"的头像\"] >2 LinearLayout[childCount=2][getChild(0).getChild(0).text!=null][getChild(1).visibleToUser=false]"
+              ]
+            },
+            {
+              "key": 146,
+              "name": "①单击[广告]",
+              "matches": "[getChild(0).desc$=\"的头像\"] >2 [childCount=2] > LinearLayout[text=null][clickable=true][childCount=0][index=1]"
+            },
+            {
+              "preKeys": [
+                144,
+                145,
+                146
+              ],
+              "key": 147,
+              "name": "②点击[关闭]",
+              "fastQuery": true,
+              "anyMatches": [
+                "[text^=\"关闭\" || text*=\"Close\" || text=\"關閉此廣告\"][clickable=true][visibleToUser=true]",
+                "@LinearLayout[clickable=true] > [text=\"关闭该广告\" || text*=\"Close\"][visibleToUser=true]",
+                "@LinearLayout[index=1][clickable=true] <2 * < * - [text*=\"广告\"]",
+                "@[text=\"关闭该广告\"] -2 [text^=\"对这条广告不感兴趣\"][visibleToUser=true]"
+              ]
+            },
+            {
+              "preKeys": [
+                147
+              ],
+              "key": 148,
+              "name": "③点击[关闭]",
+              "matches": "[text=\"直接关闭\" || text=\"Close\" || text=\"关闭广告\"][clickable=true]"
+            },
+            {
+              "preKeys": [
+                148
+              ],
+              "key": 149,
+              "name": "④点击[确认]",
+              "fastQuery": true,
+              "matches": "@[text=\"确认\"][visibleToUser=true] -2 [text=\"不感兴趣原因\"]"
+            },
+            {
+              "key": 150,
+              "preKeys": [
+                145
+              ],
+              "name": "⑤误触后-按[返回键]",
+              "action": "back",
+              "fastQuery": true,
+              "matchRoot": true,
+              "actionDelay": 50,
+              "excludeActivityIds": [
+                ".plugin.sns.ui.SnsTimeLineUI",
+                ".plugin.sns.ui.improve.ImproveSnsTimelineUI",
+                ".plugin.profile.ui.ContactInfoUI"
+              ],
+              "activityIds": [],
+              "matches": "[parent=null]"
+            },
+            {
+              "key": 151,
+              "preKeys": [
+                145
+              ],
+              "name": "⑤误触右上角-点击[取消]",
+              "fastQuery": true,
+              "matches": "@LinearLayout[clickable=true] > [text=\"取消\"]"
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 77,
+          "name": "开屏广告-微信小程序",
+          "fastQuery": true,
+          "matchTime": 10000,
+          "forcedTime": 10000,
+          "priorityTime": 10000,
+          "activityIds": [
+            ".plugin.appbrand.ui.AppBrandUI",
+            ".plugin.appbrand.launching.AppBrandLaunchProxyUI",
+            ".plugin.appbrand.ui.AppBrandPluginUI"
+          ],
+          "rules": [
+            {
+              "key": 152,
+              "actionDelay": 800,
+              "matches": [
+                "[text=\"广告\" || text=\"廣告\"][visibleToUser=true]",
+                "[text=\"跳过\" || text=\"跳過\"][visibleToUser=true]"
+              ]
+            },
+            {
+              "key": 153,
+              "matchRoot": true,
+              "actionCd": 500,
+              "matches": "@TextView[text*=\"跳过\"][text.length<10][height<150] <<(25-n) FrameLayout[childCount=2] <(1,2) * < [id=\"android:id/content\"]"
+            }
+          ],
+          "order": -10,
+          "enable": true
+        },
+        {
+          "key": 78,
+          "name": "局部广告-订阅号消息-推荐文章",
+          "desc": "点击关闭",
+          "rules": [
+            {
+              "activityIds": ".plugin.brandservice.ui.flutter.BizFlutterTLFlutterViewActivity",
+              "matches": "View[childCount=2] > View[desc$=\"推​荐​\" || desc$=\"推​薦​\"][childCount=3] > ImageView[index=2][clickable=true][visibleToUser=true]",
+              "key": 154
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 79,
+          "name": "分段广告-订阅号消息-视频推荐",
+          "desc": "点击[X]-点击[不喜欢此类视频]-点击[确定]",
+          "activityIds": ".plugin.brandservice.ui.flutter.BizFlutterTLFlutterViewActivity",
+          "rules": [
+            {
+              "key": 155,
+              "name": "点击[X]",
+              "matches": "[desc=\"订阅号消息\"] +3 View >2 [visibleToUser=true] - View >3 ImageView[index=2][clickable=true]"
+            },
+            {
+              "preKeys": 155,
+              "key": 156,
+              "name": "点击[不喜欢此类视频]",
+              "matches": "[desc=\"不喜欢此类视频\"][clickable=true]"
+            },
+            {
+              "preKeys": 156,
+              "key": 157,
+              "name": "点击[确定]",
+              "matches": "[desc=\"确定\"][clickable=true]"
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 80,
+          "name": "全屏广告-文档页面-腾讯文档APP弹窗",
+          "desc": "点击关闭",
+          "rules": [
+            {
+              "fastQuery": true,
+              "activityIds": ".plugin.webview.ui.tools.MMWebViewUI",
+              "matches": "@TextView[clickable=true] + * > [visibleToUser=true][text^=\"使用 APP\"] <<n [id=\"android:id/content\"]",
+              "key": 158
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 81,
+          "name": "分段广告-订阅号消息-推荐阅读",
+          "desc": "点击关闭",
+          "activityIds": ".plugin.brandservice.ui.flutter.BizFlutterTLFlutterViewActivity",
+          "rules": [
+            {
+              "key": 159,
+              "matches": "View > Button > View[desc$=\"推​荐​\"] > ImageView[index=1][clickable=true][visibleToUser=true]"
+            },
+            {
+              "preKeys": [
+                159
+              ],
+              "key": 160,
+              "matches": "[desc=\"不看此类内容\"]"
+            },
+            {
+              "preKeys": [
+                160
+              ],
+              "key": 161,
+              "matches": "[desc=\"确定\"]"
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 82,
+          "name": "分段广告-公众号文章内广告",
+          "desc": "注意⚠️：该规则有概率误触，请谨慎开启",
+          "activityIds": [
+            ".plugin.brandservice.ui.timeline.preload.ui.TmplWebView",
+            ".plugin.webview.ui.tools.fts.MMSosWebViewUI",
+            ".plugin.webview.ui.tools.MMWebViewUI"
+          ],
+          "rules": [
+            {
+              "key": 162,
+              "excludeMatches": [
+                "[text=\"不感兴趣\" || text=\"与我无关\" || text=\"感谢你的反馈\"][visibleToUser=true]"
+              ],
+              "matches": "@View[childCount<5][bottom<2000] > [text^=\"广告\"][text.length<4][visibleToUser=true]"
+            },
+            {
+              "preKeys": [
+                162
+              ],
+              "key": 163,
+              "matches": "[text=\"关闭此广告\"][visibleToUser=true]"
+            },
+            {
+              "preKeys": [
+                162
+              ],
+              "key": 164,
+              "excludeMatches": [
+                "[text=\"感谢你的反馈\"][visibleToUser=true]",
+                "[text=\"关闭此广告\"][visibleToUser=true]"
+              ],
+              "matches": "[text=\"不感兴趣\"][visibleToUser=true]"
+            },
+            {
+              "preKeys": [
+                164
+              ],
+              "key": 165,
+              "matches": "[text=\"与我无关\"][visibleToUser=true]"
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 83,
+          "name": "全屏广告-小程序弹窗广告",
+          "desc": "点击关闭",
+          "matchTime": 20000,
+          "actionCd": 300,
+          "actionDelay": 300,
+          "rules": [
+            {
+              "fastQuery": true,
+              "activityIds": ".plugin.appbrand.ui.AppBrandUI",
+              "excludeMatches": "[text=\"跳过\" || text=\"跳過\"][visibleToUser=true]",
+              "matches": "@ImageView[visibleToUser=true][childCount=0][text=null] < FrameLayout[childCount=1] < FrameLayout[childCount=1] <2 FrameLayout[childCount=2] - FrameLayout >4 [text=\"广告\"]",
+              "key": 166
+            }
+          ],
+          "enable": false
+        }
+      ]
+    },
+    {
+      "id": "com.tencent.mobileqq",
+      "name": "QQ",
+      "groups": [
+        {
+          "key": 84,
+          "name": "开屏广告",
+          "fastQuery": true,
+          "matchTime": 10000,
+          "actionMaximum": 1,
+          "scopeKeys": [
+            87
+          ],
+          "actionMaximumKey": 177,
+          "resetMatch": "app",
+          "priorityTime": 10000,
+          "rules": [
+            {
+              "excludeActivityIds": [
+                ".activity.ChatActivity",
+                ".search.activity.UniteSearchActivity"
+              ],
+              "excludeMatches": "[vid=\"root\"]",
+              "matches": "TextView[text^=\"跳过\"][text.length<=10][!(vid=\"title\")]",
+              "key": 167
+            }
+          ],
+          "order": -10,
+          "enable": true
+        },
+        {
+          "key": 85,
+          "name": "局部广告",
+          "desc": "点击关闭",
+          "rules": [
+            {
+              "key": 168,
+              "name": "好友动态详情页广告",
+              "fastQuery": true,
+              "activityIds": [
+                "com.qzone.reborn.base.QZoneTransparentShellActivity",
+                "com.qzone.reborn.base.QZoneShellActivity"
+              ],
+              "matches": "@[desc=\"关闭广告\"][visibleToUser=true] <4 RelativeLayout <2 LinearLayout <2 LinearLayout < FrameLayout <n RecyclerView < FrameLayout - FrameLayout >2 [text=\"详情\"]"
+            },
+            {
+              "key": 169,
+              "name": "推荐你试试这些玩法",
+              "activityIds": "com.qzone.reborn.feedx.activity.QZoneFriendFeedXActivity",
+              "fastQuery": true,
+              "matches": "@[desc=\"关闭\"] - [text=\"推荐你试试这些玩法\"]"
+            },
+            {
+              "key": 170,
+              "fastQuery": true,
+              "activityIds": ".activity.SplashActivity",
+              "matches": "@ImageView[desc=\"关闭\"][clickable=true][childCount=0] -2 [text$=\"试用超级会员\"][visibleToUser=true]"
+            },
+            {
+              "key": 171,
+              "fastQuery": true,
+              "activityIds": ".activity.SplashActivity",
+              "matches": "@ImageView[clickable=true][width<100 && height<100][desc=\"关闭\" || desc=null][index!=0] <<n FrameLayout <(2,3) * <2 [childCount=4] <2 [vid=\"root\"]"
+            },
+            {
+              "key": 172,
+              "activityIds": ".activity.QPublicFragmentActivity",
+              "matches": "ImageView[width<62] < [visibleToUser=true][desc=\"关闭广告\"]"
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 86,
+          "name": "分段广告",
+          "desc": "①点击[广告/更多] ②点击[关闭这条] ③点击[直接关闭]",
+          "fastQuery": true,
+          "activityIds": [
+            "com.qzone.reborn.feedpro.activity.QzoneFriendFeedProActivity",
+            "com.qzone.reborn.layer.part.QzoneFeedProGalleryActivity",
+            "com.qzone.reborn.layer.part.QZoneFeedXGalleryActivity",
+            ".guild.base.QPublicFragmentActivityForMainWebActivity",
+            "com.qzone.reborn.base.QZoneShellActivity",
+            ".activity.SplashActivity"
+          ],
+          "rules": [
+            {
+              "key": 173,
+              "name": "①点击[广告]",
+              "anyMatches": [
+                "[text=\"广告\"][clickable=true]",
+                "@[clickable=true] > [text=\"广告\"][visibleToUser=true]"
+              ]
+            },
+            {
+              "key": 174,
+              "name": "①点击[更多]",
+              "activityIds": ".activity.SplashActivity",
+              "matches": "@[desc=\"更多\"][clickable=true] - [desc=\"广告\"][visibleToUser=true] - LinearLayout > [text=\"今天\"]"
+            },
+            {
+              "key": 175,
+              "preKeys": [
+                173,
+                174
+              ],
+              "name": "②点击[关闭]此条广告",
+              "matches": "@[clickable=true] >(1,2) [text^=\"关闭\"][text*=\"条\"][text.length<10]"
+            },
+            {
+              "key": 176,
+              "preKeys": [
+                175
+              ],
+              "name": "③点击[直接关闭]",
+              "matches": "[text=\"直接关闭\"][clickable=true]"
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 87,
+          "name": "开屏广告-QQ小程序开屏广告",
+          "desc": "点击右下角跳过",
+          "fastQuery": true,
+          "actionMaximum": 1,
+          "priorityTime": 10000,
+          "rules": [
+            {
+              "key": 177,
+              "activityIds": [
+                ".mini.appbrand.ui.AppBrandUI",
+                ".activity.miniaio.MiniChatActivity"
+              ],
+              "matches": [
+                "[text=\"广告\"][visibleToUser=true]",
+                "[text=\"跳过\"][visibleToUser=true]"
+              ]
+            }
+          ],
+          "order": -10,
+          "enable": true
+        },
+        {
+          "key": 88,
+          "name": "局部广告-聊天页面广告",
+          "rules": [
+            {
+              "key": 178,
+              "name": "关键词广告",
+              "fastQuery": true,
+              "activityIds": [
+                ".profilecard.activity.FriendProfileCardActivity",
+                ".activity.ChatActivity",
+                ".activity.SplashActivity"
+              ],
+              "matches": "FrameLayout[childCount=2] >2 FrameLayout[childCount=2] >3 FrameLayout[childCount=2] > [text=\"跳过\" || text=\"关闭\"][clickable=true]"
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 89,
+          "name": "分段广告-QQ空间空友爱看",
+          "desc": "①点击右侧折叠 ②[不感兴趣/关闭推荐] ③选择原因 ④点击[提交]",
+          "fastQuery": true,
+          "activityIds": "com.qzone.reborn.feedpro.activity.QzoneFriendFeedProActivity",
+          "rules": [
+            {
+              "key": 179,
+              "name": "①点击右侧折叠",
+              "matches": "@[clickable=true][index=parent.childCount.minus(1)] -2 [text=\"空友爱看\"]"
+            },
+            {
+              "key": 180,
+              "preKeys": [
+                179
+              ],
+              "name": "②不感兴趣/关闭推荐",
+              "matches": "@[clickable=true] >2 [text=\"不感兴趣\" || text=\"关闭推荐\"]"
+            },
+            {
+              "key": 181,
+              "preKeys": [
+                180
+              ],
+              "name": "③选择原因",
+              "activityIds": ".activity.QPublicTransFragmentActivity",
+              "matches": "[desc=\"没有我想看的类型 未选中\"]"
+            },
+            {
+              "key": 182,
+              "preKeys": [
+                181
+              ],
+              "name": "④提交",
+              "activityIds": ".activity.QPublicTransFragmentActivity",
+              "matches": "[desc$=\"已选中\"] +n * > [desc=\"提交\"]"
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 90,
+          "name": "局部广告-空间相册内广告",
+          "rules": [
+            {
+              "fastQuery": true,
+              "activityIds": "com.qzone.reborn.base.QZoneShellActivity",
+              "matches": "@ImageView[clickable=true][width<87] <2 [visibleToUser=true] - [childCount=3] >2 [text=\"广告\"]",
+              "key": 183
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 91,
+          "name": "全屏广告-弹窗广告",
+          "desc": "关闭各种场景下的全屏弹窗广告，包括频道页面、钱包页面、黄钻页面等",
+          "enable": false,
+          "rules": [
+            {
+              "key": 184,
+              "name": "频道页面-广告",
+              "fastQuery": true,
+              "activityIds": [
+                "com.tencent.mobileqq.activity.SplashActivity",
+                "com.tencent.qqlive.module.videoreport.inject.dialog.ReportDialog"
+              ],
+              "matches": "ImageView[id=\"com.tencent.mobileqq:id/close\"][clickable=true]"
+            },
+            {
+              "key": 185,
+              "name": "钱包页面-广告",
+              "activityIds": "cooperation.qwallet.plugin.QWalletToolFragmentActivity",
+              "matches": "[desc=\"弹窗推荐活动\"] + [desc=\"关闭\"]"
+            },
+            {
+              "key": 186,
+              "name": "黄钻页面-广告",
+              "activityIds": "com.tencent.mobileqq.activity.QQBrowserActivity",
+              "matches": "TextView[text.length=0&&clickable=true&&visibleToUser=true] + View[childCount<=1] > Button[text.length=0&&focusable=true]"
+            },
+            {
+              "key": 187,
+              "matchTime": 10000,
+              "actionMaximum": 1,
+              "resetMatch": "activity",
+              "name": "推广游戏广告弹窗",
+              "activityIds": [
+                "com.tencent.mobileqq.activity.QPublicTransFragmentActivity",
+                "cooperation.vip.ad.UserLeadingActivity"
+              ],
+              "anyMatches": [
+                "ViewGroup[childCount=2] > ViewGroup[childCount=3][index=1] > ViewGroup[clickable=true][visibleToUser=true][index=1][childCount=0]",
+                "Button[text.length>0][visibleToUser=true] < * -n * > [text*=\"欢迎回来\"][visibleToUser=true] +n ImageView[visibleToUser=true]"
+              ]
+            },
+            {
+              "key": 188,
+              "name": "小Q提醒",
+              "matchTime": 10000,
+              "actionMaximum": 1,
+              "resetMatch": "app",
+              "fastQuery": true,
+              "activityIds": "com.tencent.mobileqq.activity.QPublicTransFragmentActivity",
+              "matches": "ViewGroup[childCount=6] > @ViewGroup[index=2][clickable=true][visibleToUser=true] <<n [id=\"android:id/content\"]"
+            },
+            {
+              "key": 189,
+              "name": "资料卡个性装扮弹窗",
+              "activityIds": ".activity.VisitorsActivity",
+              "matches": "[desc^=\"资料卡可展示\"] + [desc=\"关闭浮层\"]"
+            },
+            {
+              "key": 190,
+              "name": "关闭开启通讯录建议弹窗页面",
+              "fastQuery": true,
+              "activityIds": ".activity.phone.PhoneMatchActivity",
+              "matches": [
+                "[text=\"开启通讯录\"]",
+                "[text=\"关闭\"]"
+              ]
+            }
+          ]
+        },
+        {
+          "key": 93,
+          "name": "全屏广告-个人主页广告",
+          "desc": "点击关闭",
+          "enable": false,
+          "rules": [
+            {
+              "key": 192,
+              "name": "迷你窝弹窗",
+              "fastQuery": true,
+              "action": "back",
+              "activityIds": "com.tencent.mobileqq.profilecard.activity.FriendProfileCardActivity",
+              "matches": "[text=\"开启迷你窝\"]"
+            },
+            {
+              "key": 193,
+              "name": "个性装扮弹窗",
+              "activityIds": "cooperation.vip.ad.UserLeadingActivity",
+              "matches": [
+                "[desc=\"关闭浮层\"]",
+                "[desc=\"关闭\"][visibleToUser=true]"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "com.tmri.app.main",
+      "name": "交管12123",
+      "groups": [
+        {
+          "key": 95,
+          "name": "开屏广告",
+          "matchTime": 10000,
+          "actionMaximum": 1,
+          "resetMatch": "app",
+          "priorityTime": 10000,
+          "rules": [
+            {
+              "fastQuery": true,
+              "matches": "[text*=\"跳过\"][text.length<10][width<500 && height<300][visibleToUser=true]",
+              "key": 200
+            }
+          ],
+          "order": -10,
+          "enable": true
+        }
+      ]
+    },
+    {
+      "id": "com.whxinna.userplatform",
+      "name": "住理生活",
+      "groups": [
+        {
+          "key": 97,
+          "name": "开屏广告",
+          "fastQuery": true,
+          "matchTime": 10000,
+          "actionMaximum": 1,
+          "actionMaximumKey": 202,
+          "resetMatch": "app",
+          "priorityTime": 10000,
+          "rules": [
+            {
+              "key": 202,
+              "matches": "[text*=\"跳过\"][text.length<10][width<500 && height<300][visibleToUser=true]"
+            },
+            {
+              "key": 203,
+              "matches": "@[name$=\"View\"][clickable=true][width<500 && height<300] <3 FrameLayout[childCount=4] <<(2,3,4) [vid=\"adsFl\"]"
+            }
+          ],
+          "order": -10,
+          "enable": true
+        }
+      ]
+    },
+    {
+      "id": "com.xunmeng.pinduoduo",
+      "name": "拼多多",
+      "groups": [
+        {
+          "key": 98,
+          "name": "开屏广告",
+          "matchTime": 10000,
+          "actionMaximum": 1,
+          "resetMatch": "app",
+          "priorityTime": 10000,
+          "rules": [
+            {
+              "fastQuery": true,
+              "excludeActivityIds": ".activity.NewPageActivity",
+              "matches": "[text*=\"跳过\"][text.length<10][width<500 && height<300][visibleToUser=true]",
+              "key": 204
+            }
+          ],
+          "order": -10,
+          "enable": true
+        },
+        {
+          "key": 99,
+          "name": "全屏广告-弹窗广告",
+          "rules": [
+            {
+              "key": 205,
+              "fastQuery": true,
+              "action": "back",
+              "activityIds": [
+                ".ui.activity.HomeActivity",
+                ".ui.activity.MainFrameActivity"
+              ],
+              "excludeMatches": "[text=\"我的订单\" || text=\"聊天\"][bottom<650][visibleToUser=true]",
+              "matches": "[text=\"开心收下\" || text=\"去抢购\" || text=\"立即抽免单\" || text=\"去刮奖\" || text=\"立即领取\" || text=\"去领大额金币\" || text=\"送你大额现金\" || text*=\"红包助手\" || text=\"刮刮卡发来的消息通知\" || text=\"立即充值\" || text=\"打款金额\"][top>600][visibleToUser=true]"
+            },
+            {
+              "key": 206,
+              "fastQuery": true,
+              "activityIds": ".ui.activity.HomeActivity",
+              "matches": "@ViewGroup[clickable=true] - ViewGroup[childCount=3] >2 [text=\"其他\"]"
+            },
+            {
+              "key": 207,
+              "fastQuery": true,
+              "activityIds": ".activity.NewPageMaskActivity",
+              "matches": [
+                "[text=\"继续拼单\"]",
+                "@[clickable=true] > [text=\"先去逛逛\"]"
+              ]
+            },
+            {
+              "key": 208,
+              "activityIds": [
+                ".ui.activity.HomeActivity",
+                ".ui.activity.MainFrameActivity"
+              ],
+              "matches": "ImageView[childCount=0][width<130&&height<130] < ViewGroup[childCount=1] < @ViewGroup[childCount=1][clickable=true][visibleToUser=true] <(1,2) ViewGroup <(1,2) ViewGroup < ViewGroup < FrameLayout < FrameLayout < FrameLayout < FrameLayout < FrameLayout <(1,2,3) [parent=null]"
+            },
+            {
+              "key": 209,
+              "matchTime": 10000,
+              "actionMaximum": 1,
+              "resetMatch": "app",
+              "activityIds": ".ui.activity.HomeActivity",
+              "matches": "@ViewGroup[childCount=1][clickable=true] < ViewGroup[childCount=2] < [childCount=1] < [childCount=1] < [childCount=1] < [childCount=1] < [childCount=1] < [childCount=1] < [childCount=1] <2 FrameLayout <2 [parent=null]"
+            },
+            {
+              "key": 210,
+              "matchTime": 10000,
+              "actionMaximum": 1,
+              "resetMatch": "app",
+              "activityIds": ".ui.activity.HomeActivity",
+              "matches": "@ImageView[index=0][vid=\"pdd\"][childCount=0][visibleToUser=true][width<120&&height<120] < RelativeLayout[childCount=2] < FrameLayout[childCount=1] < FrameLayout[childCount=1] < [parent=null]"
+            },
+            {
+              "key": 211,
+              "activityIds": ".activity.NewPageActivity",
+              "matches": "[desc=\"关闭按钮\"]",
+              "action": "clickCenter"
+            },
+            {
+              "key": 212,
+              "fastQuery": true,
+              "activityIds": ".ui.activity.HomeActivity",
+              "matches": "@ViewGroup[width<86 && height<86][clickable=true][focusable=true][clickable=true] + ViewGroup [text=\"元\"]"
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 100,
+          "name": "局部广告-悬浮广告",
+          "desc": "点击关闭",
+          "activityIds": ".ui.activity.HomeActivity",
+          "rules": [
+            {
+              "key": 213,
+              "matches": "@TextView[id=null][clickable=true] + Image[id=null][text=\"webp\"]"
+            },
+            {
+              "key": 214,
+              "matches": "[id=\"unactive_watch_video_pendant\"] > TextView[clickable=true][text=\"\"][childCount=0]"
+            },
+            {
+              "key": 215,
+              "matches": "RelativeLayout[childCount=2] > RelativeLayout[vid=\"pdd\"] + @FrameLayout[childCount=1][clickable=true][visibleToUser=true][text=null][vid=\"pdd\"] > ImageView[childCount=0][visibleToUser=true]"
+            },
+            {
+              "key": 216,
+              "name": "多多视频金币提示",
+              "matches": "[text^=\"看5分钟视频\"] -2 Image"
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 101,
+          "name": "局部广告-商品详情页视频讲解窗口",
+          "desc": "点击关闭⚠️需禁止pdd悬浮窗权限,否则无焦点导致失效",
+          "rules": [
+            {
+              "fastQuery": true,
+              "activityIds": ".activity.NewPageActivity",
+              "anyMatches": [
+                "[vid=\"iv_float_window_close\"]",
+                "@ImageView[desc=\"关闭\"][clickable=true] - * ->n [desc=\"tronplayer_view\"] <<2 [childCount=1] <<2 RelativeLayout[childCount=1] <n * < [id=\"android:id/content\"]"
+              ],
+              "key": 217
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 102,
+          "name": "全屏广告-多多视频划到广告自动跳过",
+          "desc": "点击返回自动刷新，从而跳过广告",
+          "fastQuery": true,
+          "activityIds": ".ui.activity.HomeActivity",
+          "rules": [
+            {
+              "key": 218,
+              "matches": [
+                "TextView[text=\"正在直播\"]",
+                "@ImageView[desc=\"返回\"] <4 ViewGroup < * < * < [id=\"android:id/content\"]"
+              ]
+            },
+            {
+              "key": 219,
+              "matches": [
+                "TextView[text=\"查看更多低价商品\"]",
+                "@ImageView[desc=\"返回\"] <4 ViewGroup < * < * < [id=\"android:id/content\"]"
+              ]
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 103,
+          "name": "全屏广告-下单后出现的弹窗",
+          "desc": "点击关闭",
+          "fastQuery": true,
+          "rules": [
+            {
+              "key": 220,
+              "activityIds": [
+                ".activity.NewPageMaskActivity",
+                ".ui.activity.HomeActivity"
+              ],
+              "action": "clickCenter",
+              "matches": "@Button[text=\"关闭弹窗\" || desc=\"关闭弹窗\"][clickable=true] <n View[childCount>1] <<(1,2) View[id=\"main\"] <<2 WebView[text=\"拼多多\"] <<3 FrameLayout[vid!=null] <2 ViewGroup <2 FrameLayout <<3 [id=\"android:id/content\"]"
+            },
+            {
+              "preKeys": [
+                220
+              ],
+              "name": "二级全屏推荐",
+              "matchTime": 10000,
+              "activityIds": ".activity.NewPageActivity",
+              "matches": "@LinearLayout[clickable=true][width<105 && height<99] + * > [text$=\"下单成功\"][visibleToUser=true]",
+              "key": 221
+            }
+          ],
+          "enable": false
+        },
+        {
+          "key": 104,
+          "name": "全屏广告-[个性化推荐]弹窗",
+          "desc": "点击[取消]",
+          "fastQuery": true,
+          "actionMaximum": 1,
+          "resetMatch": "app",
+          "rules": [
+            {
+              "activityIds": ".ui.activity.HomeActivity",
+              "matches": [
+                "[text=\"个性化推荐未开启\"]",
+                "[text=\"取消\"]"
+              ],
+              "key": 222
+            }
+          ],
+          "enable": false
+        }
+      ]
+    }
+  ]
+}
